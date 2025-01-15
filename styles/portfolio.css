@@ -175,7 +175,28 @@ footer input[type="text"], footer input[type="email"], footer textarea{
     border-radius: 5px;
     background-color: white;
     display: block;
+    width: 100%;
     padding: 10px 20px;
     margin-bottom: 24px;
     border: none;
+}
+
+/* Responsive Media Query */
+.hide{
+    display: none;
+}
+@media screen and (max-width: 576px) {
+    .skills-container, .resume-container, 
+    footer{
+        flex-direction: column;
+    }
+    footer{
+        padding: 20px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+    footer input[type="text"], footer input[type="email"], footer textarea{
+        width: calc(100% - 40px);
+    }
 }
